@@ -19,7 +19,6 @@ public class ResponseJsonServlet extends HttpServlet {
 
         //Content-Type: application/json
         response.setContentType("application/json");
-//        response.setCharacterEncoding("utf-8");
 
         HelloData helloData = new HelloData();
         helloData.setUsername("fromis");
@@ -30,7 +29,7 @@ public class ResponseJsonServlet extends HttpServlet {
 
         response.getOutputStream().print(result);
 
-        //application/json 은 기본적으로 utf-8 을 쓰는게 규약되어있다. 저게 보인다? 하면 utf-8 인거다.
+        // application/json 은 기본적으로 utf-8 을 쓰는게 규약되어있다. 저게 보인다? 하면 utf-8 인거다.
         // 근데 getWriter를 쓰게 되면 ContentType 상관없이 지가 내부적으로 charset을 추가해준다.
         // 근데 그게 utf-8이 아닐수도 있다. 그래서 만약에 getWriter 로 응답할 때 charset을 지정 안해주면
         // 지 멋대로 나갈 위험이 있기에 uft-8 지정을 같이 해주어야 한다.

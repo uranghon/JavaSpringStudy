@@ -12,7 +12,7 @@ public class OldController implements Controller {
     @Override
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response) throws Exception {
         System.out.println("OldController.handleRequest");
-//        return new ModelAndView("new-form");
-        return new ModelAndView("/WEB-INF/new-form");
+        return new ModelAndView("new-form");
+//        return new ModelAndView("/WEB-INF/new-form");
     }
 }
